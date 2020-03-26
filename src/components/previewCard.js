@@ -16,15 +16,18 @@ class PreviewCard extends Component {
             data.map((dataset) => {
                 return (
                     
-                    <div className="row" key={data.indexOf(dataset)}>
-                        <div className="col s12">
-                            <div className="card">
-                                <div className="card-content">
-                                    <span className="card-title">{dataset.family}</span>
+                    <div key={data.indexOf(dataset)}>
+                        <div className="card">
+                            <div className="card-content">
+                                <div className="row">
+                                    <span className="card-title col l11">{dataset.family}</span>
+                                    <a href="#!"><i className="black-text small material-icons col l1">add_circle_outline</i></a>
+                                </div>
+                                <div className="row">
                                     <style>
                                     @import url({`https://fonts.googleapis.com/css?family=${dataset.family}&display=swap`});
                                     </style> 
-                                    <p style={{fontFamily: `${dataset.family}`}}>{card}</p>
+                                    <p className="col l12" style={{fontFamily: `${dataset.family}`}}>{card}</p>
                                 </div>
                             </div>
                         </div>

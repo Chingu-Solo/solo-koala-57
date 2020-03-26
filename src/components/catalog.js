@@ -11,7 +11,7 @@ class Catalog extends Component {
     
     render() {
         return (
-            <div className="container">
+            <div>
                 <MajorNav />
                 <PreviewCard />
             </div>

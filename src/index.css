@@ -15,3 +15,7 @@ code {
 .drop-arrow {
   vertical-align: middle;
 }
+
+.border-left {
+  border-left: solid black 1px;
+}

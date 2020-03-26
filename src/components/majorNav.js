@@ -10,19 +10,19 @@ class MajorNav extends Component {
 
     render() {
         return (
-            <div className="row center">
+            <div className="row container">
                 <form className="col s12">
-                    <div className="row">
+                    <div className="">
                         <div className="input-field col s3 valign-wrapper">
                             <i className="material-icons prefix">search</i>
                             <input id="icon_prefix" type="text" className="validate"/>
                             <label htmlFor="icon_prefix">Search fonts</label>
                         </div>
-                        <div className="input-field col s3 valign-wrapper">
+                        <div className="input-field col s3 valign-wrapper border-left">
                             <input id="icon_telephone" type="tel" className="validate" onChange={this.handleChange}/>
                             <label htmlFor="icon_telephone">Type something</label>
                         </div>
-                        <div className="input-field col s3 center-align">
+                        <div className="input-field col s3 center-align border-left">
                             <a className='dropdown-trigger btn' href='#!' data-target='dropdown1'>Font Size <i className="material-icons drop-arrow">arrow_drop_down</i></a>
                             <ul id='dropdown1' className='dropdown-content'>
                                 <li><a href="#!">20px</a></li>
