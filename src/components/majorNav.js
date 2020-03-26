@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateCard } from '../actions/actionCard';
+import { updateFontSize } from '../actions/actionFont';
 
 class MajorNav extends Component {
 
-    handleChange = (e) => {
+    sampleTextChange = (e) => {
         e.target.value ? this.props.updateCard(e.target.value) : this.props.updateCard("Then came the night of the first falling star.")
     }
 
+    fontSizeChange = (e) => {
+        this.props.updateFontSize(e)
+    }
+
     render() {
+        const { size } = this.props;
         return (
             <div className="row container">
                 <form className="col s12">
@@ -19,16 +25,16 @@ class MajorNav extends Component {
                             <label htmlFor="icon_prefix">Search fonts</label>
                         </div>
                         <div className="input-field col s3 valign-wrapper border-left">
-                            <input id="icon_telephone" type="tel" className="validate" onChange={this.handleChange}/>
+                            <input id="icon_telephone" type="tel" className="validate" onChange={this.sampleTextChange}/>
                             <label htmlFor="icon_telephone">Type something</label>
                         </div>
                         <div className="input-field col s3 center-align border-left">
-                            <a className='dropdown-trigger btn' href='#!' data-target='dropdown1'>Font Size <i className="material-icons drop-arrow">arrow_drop_down</i></a>
+                            <a className='dropdown-trigger btn' href='#!' data-target='dropdown1'>{size}px <i className="material-icons drop-arrow">arrow_drop_down</i></a>
                             <ul id='dropdown1' className='dropdown-content'>
-                                <li><a href="#!">20px</a></li>
-                                <li><a href="#!">24px</a></li>
-                                <li><a href="#!">32px</a></li>
-                                <li><a href="#!">40px</a></li>
+                                <li><a href="#!1" onClick={() => this.fontSizeChange(20)}>20px</a></li>
+                                <li><a href="#!2" onClick={() => this.fontSizeChange(24)}>24px</a></li>
+                                <li><a href="#!3" onClick={() => this.fontSizeChange(32)}>32px</a></li>
+                                <li><a href="#!4" onClick={() => this.fontSizeChange(40)}>40px</a></li>
                             </ul>
                         </div>
                         <div className="input-field col s1 switch center-align">
@@ -50,10 +56,17 @@ class MajorNav extends Component {
     }    
 }
 
-const dispatchToProps = (dispatch) => {
+const mapStateToProps = (state) => {
     return {
-        updateCard: (change) => dispatch(updateCard(change))
+        size: state.fontSize
     }
 }
 
-export default connect(null, dispatchToProps)(MajorNav);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        updateCard: (change) => dispatch(updateCard(change)),
+        updateFontSize: (size) => dispatch(updateFontSize(size))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MajorNav);

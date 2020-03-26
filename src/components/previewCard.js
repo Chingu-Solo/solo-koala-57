@@ -11,7 +11,7 @@ class PreviewCard extends Component {
             })
     }
     render() {
-        const { card, data } = this.props;
+        const { card, size, data } = this.props;
         const cardList = data.length ? (
             data.map((dataset) => {
                 return (
@@ -24,10 +24,8 @@ class PreviewCard extends Component {
                                     <a href="#!"><i className="black-text small material-icons col l1">add_circle_outline</i></a>
                                 </div>
                                 <div className="row">
-                                    <style>
-                                    @import url({`https://fonts.googleapis.com/css?family=${dataset.family}&display=swap`});
-                                    </style> 
-                                    <p className="col l12" style={{fontFamily: `${dataset.family}`}}>{card}</p>
+                                    <link href={`https://fonts.googleapis.com/css?family=${dataset.family}&display=swap`} /> 
+                                    <p className="col l12" style={{fontFamily:`${dataset.family}`}, {fontSize:`${size}px`}}>{card}</p>
                                 </div>
                             </div>
                         </div>
@@ -48,6 +46,7 @@ class PreviewCard extends Component {
 const mapStateToProps = (state) => {
     return {
         card: state.card,
+        size: state.fontSize,
         data: state.data
     }
 }
