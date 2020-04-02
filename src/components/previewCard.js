@@ -11,12 +11,13 @@ class PreviewCard extends Component {
             })
     }
     render() {
-        const { card, size, data } = this.props;
-        const cardList = data.length ? (
-            data.map((dataset) => {
+        const { card, size, data, search } = this.props;
+        const filterData = Object.values(data).filter(d => d.family.includes(search));
+        const cardList = filterData.length ? (
+            filterData.map((dataset) => {
                 return (
                     
-                    <div key={data.indexOf(dataset)}>
+                    <div key={filterData.indexOf(dataset)}>
                         <div className="card">
                             <div className="card-content">
                                 <div className="row">
@@ -47,7 +48,8 @@ const mapStateToProps = (state) => {
     return {
         card: state.card,
         size: state.fontSize,
-        data: state.data
+        data: state.data,
+        search: state.search
     }
 }
 

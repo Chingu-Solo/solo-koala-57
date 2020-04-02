@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateCard } from '../actions/actionCard';
 import { updateFontSize } from '../actions/actionFont';
+import { updateSearch } from '../actions/actionSearch';
 
 class MajorNav extends Component {
 
+    searchChange = (e) => {
+        this.props.updateSearch(e.target.value);
+    }
+
     sampleTextChange = (e) => {
-        e.target.value ? this.props.updateCard(e.target.value) : this.props.updateCard("Then came the night of the first falling star.")
+        e.target.value ? this.props.updateCard(e.target.value) : this.props.updateCard("Then came the night of the first falling star.");
     }
 
     fontSizeChange = (e) => {
@@ -21,7 +26,7 @@ class MajorNav extends Component {
                     <div className="">
                         <div className="input-field col s3 valign-wrapper">
                             <i className="material-icons prefix">search</i>
-                            <input id="icon_prefix" type="text" className="validate"/>
+                            <input id="icon_prefix" type="text" className="validate" onChange={this.searchChange}/>
                             <label htmlFor="icon_prefix">Search fonts</label>
                         </div>
                         <div className="input-field col s3 valign-wrapper border-left">
@@ -64,6 +69,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
+        updateSearch: (search) => dispatch(updateSearch(search)),
         updateCard: (change) => dispatch(updateCard(change)),
         updateFontSize: (size) => dispatch(updateFontSize(size))
     }
