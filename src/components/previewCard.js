@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import { updateFontData } from '../actions/actionFontData';
+import LazyLoad from 'react-lazyload';
 
 class PreviewCard extends Component {
     componentDidMount() {
@@ -16,7 +17,7 @@ class PreviewCard extends Component {
         const cardList = filterData.length ? (
             filterData.map((dataset) => {
                 return (
-                    
+                    <LazyLoad height={100} once key={filterData.indexOf(dataset)}>
                     <div key={filterData.indexOf(dataset)}>
                         <div className="card">
                             <div className="card-content">
@@ -31,6 +32,7 @@ class PreviewCard extends Component {
                             </div>
                         </div>
                     </div>
+                    </LazyLoad>
                 )
             })
         ) : (
