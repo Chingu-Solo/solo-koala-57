@@ -14,8 +14,92 @@ code {
 
 .drop-arrow {
   vertical-align: middle;
+  background-color: transparent;
+  color: #ff5252 !important;
+}
+
+.add-circle {
+  background-color: transparent;
+  color: #ff5252 !important;
 }
 
 .border-left {
   border-left: solid black 1px;
+}
+
+.border-right {
+  border-right: solid black 1px;
+}
+
+.App, .nav-wrapper, .btn, .btn:focus, nav .brand-logo, nav, nav ul a, .App .size-choice {  
+  background-color: transparent;
+  color: black;
+}
+
+#act .active {
+  color: black;
+  background-color: transparent;
+}
+
+.btn {
+  text-transform: none;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.night .size-choice:hover {
+  background-color: rgba(65, 23, 23, 0.884);
+}
+
+.night {
+  background-color: #222;
+}
+
+.material-icons {
+  color: black;
+}
+
+.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .brand-logo, .night nav ul a, .night .dropdown-content, .night .size-choice {
+  background-color: transparent;
+  color: white;
+}
+
+.night .material-icons, .night .btn {
+background-color: transparent;
+color: white; 
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+ 
+  background-color: #292929;
+  border: white
+ 
+}
+
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before,
+ 
+input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
+ 
+  -webkit-transform: scale(2.4);
+ 
+          transform: scale(2.4);
+ 
+  background-color: rgba(128, 128, 128, 0.4);
+ 
+}
+
+input:focus {
+  border-bottom: 1px solid #ff5252 !important;
+  box-shadow: 0 1px 0 0 #ff5252 !important;
+}
+
+.input-field .prefix.active {
+  color: #ff5252 !important;
+}
+
+label.active {
+  color: #ff5252 !important;
 }

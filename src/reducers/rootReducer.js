@@ -2,39 +2,27 @@ const initState = {
     card: "Then came the night of the first falling star.",
     fontSize: 20,
     data: {},
-    search: ""
+    search: "",
+    mode: false
 }
 
 const rootReducer = (state = initState, action) => {
     switch(action.type) {
-        case 'UPDATE_CARD':
-            return {
-                card: action.change,
-                fontSize: state.fontSize,
-                data: state.data,
-                search: state.search
-            };
+        case 'UPDATE_SAMPLE_TEXT':
+            let card = action.change;
+            return {...state, card};
         case 'UPDATE_FONT_DATA':
-            return {
-                card: state.card,
-                fontSize: state.fontSize,
-                data: action.fontData,
-                search: state.search
-            };
+            let data = action.fontData;
+            return {...state, data};
         case 'UPDATE_FONT_SIZE':
-            return {
-                card: state.card,
-                fontSize: action.size,
-                data: state.data,
-                search: state.search
-            }
+            let fontSize = action.size;
+            return {...state, fontSize}
         case 'UPDATE_SEARCH':
-            return {
-                card: state.card,
-                fontSize: state.fontSize,
-                data: state.data,
-                search: action.search
-            }
+            let search = action.search;
+            return {...state, search}
+        case 'UPDATE_MODE':
+            let mode = !state.mode;
+            return {...state, mode}
         default:
             return state;
     }

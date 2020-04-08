@@ -17,21 +17,21 @@ class PreviewCard extends Component {
         const cardList = filterData.length ? (
             filterData.map((dataset) => {
                 return (
-                    <LazyLoad height={100} once key={filterData.indexOf(dataset)}>
-                    <div key={filterData.indexOf(dataset)}>
+                    <LazyLoad height={100} key={filterData.indexOf(dataset)}>
                         <div className="card">
                             <div className="card-content">
                                 <div className="row">
                                     <span className="card-title col l11">{dataset.family}</span>
-                                    <a href="#!"><i className="black-text small material-icons col l1">add_circle_outline</i></a>
+                                    <a href="#!"><span className="black-text small material-icons add-circle col l1">add_circle</span></a>
                                 </div>
                                 <div className="row">
-                                    <link href={`https://fonts.googleapis.com/css?family=${dataset.family}&display=swap`} /> 
-                                    <p className="col l12" style={{fontFamily:`${dataset.family}`}, {fontSize:`${size}px`}}>{card}</p>
+                                <style>
+                                    @import url({`https://fonts.googleapis.com/css?family=${dataset.family}&display=swap`});
+                                </style>  
+                                    <p className="col l12" style={{fontFamily: `${dataset.family}`, fontSize:`${size}px`}}>{card}</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </LazyLoad>
                 )
             })
@@ -39,7 +39,7 @@ class PreviewCard extends Component {
             <div className="center">Loading fonts...</div>
         )
         return (
-            <div className="container">
+            <div>
                 {cardList}
             </div>
         )
