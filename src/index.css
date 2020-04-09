@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 .drop-arrow {
   vertical-align: middle;
   background-color: transparent;

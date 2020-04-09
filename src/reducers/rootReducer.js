@@ -3,7 +3,8 @@ const initState = {
     fontSize: 20,
     data: {},
     search: "",
-    mode: false
+    mode: false,
+    grid: false
 }
 
 const rootReducer = (state = initState, action) => {
@@ -23,6 +24,9 @@ const rootReducer = (state = initState, action) => {
         case 'UPDATE_MODE':
             let mode = !state.mode;
             return {...state, mode}
+        case 'UPDATE_GRID':
+            let grid = !state.grid;
+            return {...state, grid}
         default:
             return state;
     }

@@ -17,18 +17,16 @@ class PreviewCard extends Component {
         const cardList = filterData.length ? (
             filterData.map((dataset) => {
                 return (
-                    <LazyLoad height={100} key={filterData.indexOf(dataset)}>
+                    <LazyLoad className={!this.props.grid ? "grid-item" : null} height={100} key={filterData.indexOf(dataset)}>
                         <div className="card">
                             <div className="card-content">
                                 <div className="row">
-                                    <span className="card-title col l11">{dataset.family}</span>
-                                    <a href="#!"><span className="black-text small material-icons add-circle col l1">add_circle</span></a>
+                                    <span className="card-title col s11">{dataset.family}</span>
+                                    <a href="#!"><span className="black-text small material-icons add-circle col s1">add_circle</span></a>
                                 </div>
                                 <div className="row">
-                                <style>
-                                    @import url({`https://fonts.googleapis.com/css?family=${dataset.family}&display=swap`});
-                                </style>  
-                                    <p className="col l12" style={{fontFamily: `${dataset.family}`, fontSize:`${size}px`}}>{card}</p>
+                                    <style>@import url({`https://fonts.googleapis.com/css?family=${dataset.family}&display=swap`})</style>  
+                                    <p className="col s12" style={{fontFamily: `${dataset.family}`, fontSize:`${size}px`}}>{card}</p>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +37,7 @@ class PreviewCard extends Component {
             <div className="center">Loading fonts...</div>
         )
         return (
-            <div>
+            <div className={!this.props.grid ? "grid-container" : null}>
                 {cardList}
             </div>
         )
@@ -51,7 +49,8 @@ const mapStateToProps = (state) => {
         card: state.card,
         size: state.fontSize,
         data: state.data,
-        search: state.search
+        search: state.search,
+        grid: state.grid
     }
 }
 

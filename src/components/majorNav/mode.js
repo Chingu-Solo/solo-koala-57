@@ -4,11 +4,7 @@ import { updateMode } from '../../actions/actionMode';
 
 const Mode = (props) => {
 
-    // const darkMode = (e) => {
-    //     props.updateMode(e)
-    // }
-
-    const {mode, updateMode} = props;
+    const {updateMode} = props;
 
     return (
         <div className="input-field col s1 switch center-align" onChange={updateMode}>
@@ -19,11 +15,5 @@ const Mode = (props) => {
         </div>
     )
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         updateMode: () => dispatch(updateMode())
-//     }
-// }
 
 export default connect(null, {updateMode})(Mode);
