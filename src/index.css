@@ -101,10 +101,15 @@ input:focus {
   box-shadow: 0 1px 0 0 #ff5252 !important;
 }
 
-.input-field .prefix.active {
+.input-field .prefix.active, label.active {
   color: #ff5252 !important;
 }
 
-label.active {
-  color: #ff5252 !important;
+.hide {
+  display: none;
+}
+
+.night .material-icons .btn-floating, .App .btn-floating, .btn-floating i, .btn-large, .btn-floating {
+  background-color: #9e9e9e33 !important;
+  color: #222 !important;
 }

@@ -9,7 +9,7 @@ import Reset from './majorNav/reset';
 const MajorNav = () => {
     return (
         <div className="row">
-            <form className="col s12">
+            <div className="col s12">
                 <div>
                     <Search />
                     <SampleText />
@@ -18,7 +18,7 @@ const MajorNav = () => {
                     <Grid />
                     <Reset />
                 </div>
-            </form>
+            </div>
         </div>
     )
 }    
