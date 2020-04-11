@@ -9,11 +9,13 @@ const Search = (props) => {
         props.updateSearch(e.target.value);
     }
         return (
+            <form action="" id="search">
             <div className="input-field col s3 valign-wrapper">
                 <i id="act" className="material-icons prefix">search</i>
                 <input id="icon_prefix" type="text" onChange={searchChange}/>
                 <label htmlFor="icon_prefix">Search fonts</label>
-            </div>            
+            </div>
+            </form>            
         )
 }
 

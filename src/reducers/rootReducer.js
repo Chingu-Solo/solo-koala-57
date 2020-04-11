@@ -27,6 +27,15 @@ const rootReducer = (state = initState, action) => {
         case 'UPDATE_GRID':
             let grid = !state.grid;
             return {...state, grid}
+        case 'HANDLE_RESET':
+            return state = {
+                card: "Then came the night of the first falling star.",
+                fontSize: 20,
+                data: state.data,
+                search: "",
+                mode: false,
+                grid: false
+            }
         default:
             return state;
     }

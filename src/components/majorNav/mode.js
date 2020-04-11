@@ -9,7 +9,7 @@ const Mode = (props) => {
     return (
         <div className="input-field col s1 switch center-align" onChange={updateMode}>
             <label className="valign-wrapper">
-                <input type="checkbox" />
+                <input id="mode-switch" type="checkbox" />
                 <span className="lever grey lighten-1"></span>
             </label>
         </div>
