@@ -10,12 +10,9 @@ const SampleText = (props) => {
     }
 
     return (
-        <form action="" id="sample">
-        <div className="input-field col s3 valign-wrapper border-left border-right">
-            <input id="icon_telephone" type="text" onChange={sampleTextChange}/>
-            <label htmlFor="icon_telephone">Type something</label>
+        <div id="sample" className="input-field text-input">
+            <input id="sample-input" type="text" onChange={sampleTextChange} placeholder="Type something"/>
         </div>
-        </form>
     )
 }
 

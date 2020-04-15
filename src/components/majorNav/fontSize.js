@@ -13,8 +13,8 @@ class FontSize extends Component {
         const { size } = this.props;
 
         return (
-            <div className="input-field col s3 center-align  drop-menu">
-                <a className='dropdown-trigger btn' href='#!' data-target='dropdown1'>{size}px <span className="material-icons drop-arrow">arrow_drop_down</span></a>
+            <div className="input-field center-align  drop-menu">
+                <button className='dropdown-trigger btn' data-target='dropdown1'>{size}px <span className="material-icons drop-arrow">arrow_drop_down</span></button>
                 <ul id='dropdown1' className='dropdown-content'>
                     <li><a className="size-choice" href="#!1" onClick={() => this.fontSizeChange(20)}>20px</a></li>
                     <li><a className="size-choice" href="#!2" onClick={() => this.fontSizeChange(24)}>24px</a></li>

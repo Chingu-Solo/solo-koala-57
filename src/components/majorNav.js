@@ -8,18 +8,18 @@ import Reset from './majorNav/reset';
 
 const MajorNav = () => {
     return (
-        <div className="row">
-            <div className="col s12">
-                <div>
+                <div className="flex-container valign-wrapper">
+                    <div className="flex-input">
                     <Search />
                     <SampleText />
-                    <FontSize />
-                    <Mode />
-                    <Grid />
-                    <Reset />
+                    </div>
+                    <div className="flex-btn">
+                        <FontSize />
+                        <Mode />
+                        <Grid />
+                        <Reset />
+                    </div>
                 </div>
-            </div>
-        </div>
     )
 }    
 

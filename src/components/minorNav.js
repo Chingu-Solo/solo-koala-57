@@ -5,7 +5,8 @@ const MinorNav = () => {
     return (
         <nav>
             <div className="nav-wrapper">
-            <Link to="/" className="brand-logo">Google</Link>
+            <Link to="/"><span className="brand-logo"></span></Link>
+            <Link to="/"><span className="logo-font">Fonts</span></Link>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li><Link to="/">CATALOG</Link></li>
                 <li><Link to="/features">FEATURES</Link></li>

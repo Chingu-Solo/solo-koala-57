@@ -1,14 +1,15 @@
 import React from 'react';
 import './index.css';
-import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MinorNav from './components/minorNav';
 import Catalog from './components/catalog';
+import DarkMode from './darkMode';
 
-const App = (props) => {
+const App = () => {
   return (
     <BrowserRouter>
-        <div className={!props.mode ? "App" : "night"}>
+        <div>
+        <DarkMode />
         <MinorNav />
         <Switch>
           <Route exact path="/" component={Catalog} />
@@ -18,10 +19,4 @@ const App = (props) => {
   )
 }
 
-const mapStateToProps = (state) => {  
-  return {     
-     mode: state.mode  
-  };
-} 
-
-export default connect(mapStateToProps)(App);
+export default App;

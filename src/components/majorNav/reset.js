@@ -16,8 +16,8 @@ const Reset = (props) => {
     }
 
     return (
-        <div className="input-field col s1 center-align">
-            <a href="/" onClick={resetChange}><i className="material-icons icon">refresh</i></a>
+        <div className="input-field center-align">
+            <button className="btn" onClick={resetChange}><i className="material-icons icon">refresh</i></button>
         </div>
     )
 }

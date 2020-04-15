@@ -7,8 +7,8 @@ const Grid = (props) => {
     const { updateGrid } = props;
 
     return (
-        <div className="input-field col s1 center-align">
-            <a href="#!" onClick={updateGrid}><i className="material-icons icon">format_list_bulleted</i></a>
+        <div className="input-field center-align">
+            <button className="btn" onClick={updateGrid}><i className="material-icons icon">reorder</i></button>
         </div>
     )
 }
