@@ -5,8 +5,8 @@ import { handleReset } from '../../actions/actionReset';
 const Reset = (props) => {
 
     const resetChange = () => {
-        document.getElementById("sample").reset();
-        document.getElementById("search").reset();
+        document.getElementById("sample-input").value = "";
+        document.getElementById("search-input").value= "";
         document.getElementById("mode-switch").checked = false;
         let elems = document.querySelectorAll(".active");
         [].forEach.call(elems, (el) => {

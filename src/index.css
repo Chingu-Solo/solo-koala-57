@@ -12,13 +12,22 @@ code {
     monospace;
 }
 
-nav .nav-wrapper {
-  border: 1px solid #dadce0
+nav {
+  box-shadow: none;
+  border-bottom: 1px solid #9e9e9e;
 }
 
-nav .brand-logo {
+.App nav .brand-logo {
   background-image: url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24dp.png);
   opacity: .6;
+  margin: 1.5rem 4rem;
+  width: 74px;
+  height: 24px;
+  background-size: 74px 24px;
+}
+
+.night nav .brand-logo {
+  background-image: url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_light_color_74x24dp.png);
   margin: 1.5rem 4rem;
   width: 74px;
   height: 24px;
@@ -133,7 +142,7 @@ nav ul {
   color: #222;
 }
 
-.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .brand-logo, .night nav ul a, .night .dropdown-content, .night .size-choice, .night input::placeholder, .night input {
+.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .brand-logo, .night nav ul a, .night .dropdown-content, .night .size-choice, .night input::placeholder, .night input, .night nav .logo-font {
   background-color: transparent;
   color: white;
 }
