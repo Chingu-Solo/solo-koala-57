@@ -94,6 +94,11 @@ nav ul {
   color: #ff5252 !important;
 }
 
+.night .dropdown-content {
+  background-color: #222;
+  color: white;
+}
+
 #switch-label {
   position: relative;
 }
@@ -142,7 +147,7 @@ nav ul {
   color: #222;
 }
 
-.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .brand-logo, .night nav ul a, .night .dropdown-content, .night .size-choice, .night input::placeholder, .night input, .night nav .logo-font {
+.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .brand-logo, .night nav ul a, .night .size-choice, .night input::placeholder, .night input, .night nav .logo-font {
   background-color: transparent;
   color: white;
 }
