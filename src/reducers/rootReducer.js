@@ -1,10 +1,11 @@
 const initState = {
-    card: "Then came the night of the first falling star.",
+    card: 'Then came the night of the first falling star.',
     fontSize: 20,
     data: {},
-    search: "",
+    search: '',
     mode: false,
-    grid: false
+    grid: false,
+    gridIcon: 'reorder'
 }
 
 const rootReducer = (state = initState, action) => {
@@ -26,13 +27,19 @@ const rootReducer = (state = initState, action) => {
             return {...state, mode}
         case 'UPDATE_GRID':
             let grid = !state.grid;
-            return {...state, grid}
+            let gridIcon;
+
+            if (state.gridIcon === 'reorder') {
+                gridIcon = 'grid_on'
+            } else { gridIcon = 'reorder'}
+            
+            return {...state, grid, gridIcon}
         case 'HANDLE_RESET':
             return state = {
-                card: "Then came the night of the first falling star.",
+                card: 'Then came the night of the first falling star.',
                 fontSize: 20,
                 data: state.data,
-                search: "",
+                search: '',
                 mode: false,
                 grid: false
             }
