@@ -13,7 +13,7 @@ class PreviewCard extends Component {
     }
     render() {
         const { card, size, data, search } = this.props;
-        const filterData = Object.values(data).filter(d => d.family.includes(search));
+        const filterData = Object.values(data).filter(d => d.family.toUpperCase().includes(search));
         const cardList = filterData.length ? (
             filterData.map((dataset) => {
                 return (

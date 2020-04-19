@@ -6,7 +6,7 @@ import { updateSearch } from '../../actions/actionSearch';
 const Search = (props) => {
 
     const searchChange = (e) => {
-        props.updateSearch(e.target.value);
+        props.updateSearch(e.target.value.toUpperCase());
     }
         return (
             <div id="search" className="input-field text-input">
