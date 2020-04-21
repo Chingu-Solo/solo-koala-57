@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import MinorNav from './components/minorNav';
+import MinorNavDesktop from './components/minorNav/minorNavDesktop';
 import Catalog from './components/catalog';
 import DarkMode from './darkMode';
 
@@ -10,7 +10,7 @@ const App = () => {
     <BrowserRouter>
         <div>
         <DarkMode />
-        <MinorNav />
+        <MinorNavDesktop />
         <Switch>
           <Route exact path="/" component={Catalog} />
         </Switch>

@@ -15,30 +15,59 @@ code {
 nav {
   box-shadow: none;
   border-bottom: 1px solid #9e9e9e;
+  vertical-align: middle;
 }
 
-.App nav .brand-logo {
+.night .sidenav {
+  background-color: #222;
+}
+
+.App nav .google-logo, .App .sidenav .google-logo {
+  display: inline-block;
   background-image: url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24dp.png);
   opacity: .6;
-  margin: 1.5rem 4rem;
   width: 74px;
   height: 24px;
   background-size: 74px 24px;
+  vertical-align: middle;
 }
 
-.night nav .brand-logo {
+.night nav .google-logo, .night .sidenav .google-logo {
+  display: inline-block;
   background-image: url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_light_color_74x24dp.png);
-  margin: 1.5rem 4rem;
   width: 74px;
   height: 24px;
   background-size: 74px 24px;
+  vertical-align: middle;
 }
 
-nav .logo-font {
-  font-family: "Product Sans",Arial,Helvetica,sans-serif;
+nav .logo-font, .sidenav .logo-font {
   color: rgba(0,0,0,.6);
-  margin: 1.5rem 9rem;
   font-size: 22.1px;
+}
+
+.night .sidenav .logo-font {
+  color: white
+}
+
+.logo-lockup {
+  padding-right: 0;
+}
+
+ul .nav-mobile {
+  display: flex;
+}
+
+.sidenav li > a {
+  padding: 0 0 0 23px;
+}
+
+.night .sidenav li > a {
+  color: white;
+}
+
+#font-logo {
+  padding-left: 2px;
 }
 
 nav ul {
@@ -71,17 +100,6 @@ nav ul {
   padding: 0px 5px 0px 5px;
 }
 
-.flex-btn {
-  display: flex;
-  flex-direction: row;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  margin: 0 2.5rem;
-}
-
 .card {
   box-shadow: none;
   border-top: 1px solid #9e9e9e;
@@ -108,7 +126,7 @@ nav ul {
   color: #ff5252 !important;
 }
 
-.App, .nav-wrapper, .btn, .btn:focus, nav .brand-logo, nav, nav ul a, .App .size-choice, .App input::placeholder, .App input {  
+.App, .nav-wrapper, .btn, .btn:focus, nav .google-logo, nav, nav ul a, .App .size-choice, .App input::placeholder, .App input {  
   background-color: transparent;
   color: #222;
 }
@@ -147,7 +165,7 @@ nav ul {
   color: #222;
 }
 
-.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .brand-logo, .night nav ul a, .night .size-choice, .night input::placeholder, .night input, .night nav .logo-font {
+.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .google-logo, .night nav ul a, .night .size-choice, .night input::placeholder, .night input, .night nav .logo-font {
   background-color: transparent;
   color: white;
 }
@@ -228,4 +246,54 @@ input[type="text"]:not(.browser-default) {
 .night .material-icons .btn-floating, .App .btn-floating, .btn-floating i, .btn-large, .btn-floating {
   background-color: #9e9e9e33 !important;
   color: #222 !important;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.menu-button {
+  display: none;
+}
+
+nav .nav-wrapper i, nav i .material-icons {
+  line-height: inherit;
+}
+
+.flex-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0 2.5rem;
+  }
+
+@media only screen and (max-width: 1260px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .switch, .list-layout, .drop-menu, #sample {
+    display: none;
+  }
+  .menu-button {
+    display: inline-block;
+  }
 }
