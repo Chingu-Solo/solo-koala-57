@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+  box-shadow: none;
+  border-bottom: 1px solid #9e9e9e;
+  vertical-align: middle;
+}
+
+.night .sidenav {
+  background-color: #222;
+}
+
+.App nav .google-logo, .App .sidenav .google-logo {
+  display: inline-block;
+  background-image: url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24dp.png);
+  opacity: .6;
+  width: 74px;
+  height: 24px;
+  background-size: 74px 24px;
+  vertical-align: middle;
+}
+
+.night nav .google-logo, .night .sidenav .google-logo {
+  display: inline-block;
+  background-image: url(https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_light_color_74x24dp.png);
+  width: 74px;
+  height: 24px;
+  background-size: 74px 24px;
+  vertical-align: middle;
+}
+
+nav .logo-font, .sidenav .logo-font {
+  color: rgba(0,0,0,.6);
+  font-size: 22.1px;
+}
+
+.night .sidenav .logo-font {
+  color: white
+}
+
+.logo-lockup {
+  padding-right: 0;
+}
+
+ul .nav-mobile {
+  display: flex;
+}
+
+.sidenav li > a {
+  padding: 0 0 0 23px;
+}
+
+.night .sidenav li > a {
+  color: white;
+}
+
+#font-logo {
+  padding-left: 2px;
+}
+
+nav ul {
+  margin: 0 3rem;
+}
+
+.flex-container {
+  display: flex;
+  height: 46px;
+  justify-content: space-between;
+  margin: 0 60px 48px;
+  max-width: 1440px;
+  border: 1px solid #dadce0;
+  border-radius: 48px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1rem 4rem;
+}
+
+.flex-input {
+  display: flex;
+  flex: 1 1;
+}
+
+.input-field {
+  margin: 0px;
+}
+
+#sample {
+  padding: 0px 5px 0px 5px;
+}
+
+.card {
+  box-shadow: none;
+  border-top: 1px solid #9e9e9e;
+  margin: 0 1.4rem;
+}
+
+.drop-arrow {
+  vertical-align: middle;
+  background-color: transparent;
+  color: #ff5252 !important;
+}
+
+.night .dropdown-content {
+  background-color: #222;
+  color: white;
+}
+
+#switch-label {
+  position: relative;
+}
+
+.add-circle {
+  background-color: transparent;
+  color: #ff5252 !important;
+}
+
+.App, .nav-wrapper, .btn, .btn:focus, nav .google-logo, nav, nav ul a, .App .size-choice, .App input::placeholder, .App input {  
+  background-color: transparent;
+  color: #222;
+}
+
+#act {
+  font-size: 24px;
+  top: 1px;
+  width: 24px;
+}
+
+#act .active {
+  color: #222;
+  background-color: transparent;
+}
+
+.btn {
+  text-transform: none;
+  box-shadow: none;
+  padding: 0 9px;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #222;
+}
+
+.night .size-choice:hover {
+  background-color: rgba(65, 23, 23, 0.884);
+}
+
+.night {
+  background-color: #222;
+}
+
+.material-icons {
+  color: #222;
+}
+
+.night h1, .night h2, .night div, .night textarea, .night .nav-wrapper, .night nav .google-logo, .night nav ul a, .night .size-choice, .night input::placeholder, .night input, .night nav .logo-font {
+  background-color: transparent;
+  color: white;
+}
+
+.night .material-icons, .night .btn {
+background-color: transparent;
+color: white; 
+}
+
+.switch label input[type=checkbox] + .lever:after {
+  background-color: #222;
+  border: #222;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: white;
+  border: white;
+}
+
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before,
+ 
+input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
+ 
+  -webkit-transform: scale(2.4);
+ 
+          transform: scale(2.4);
+ 
+  background-color: rgba(128, 128, 128, 0.4);
+ 
+}
+
+#search-input:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+#sample-input:focus {
+  border-bottom: 1px solid #ff5252 !important;
+  box-shadow: 0 1px 0 0 #ff5252 !important;
+}
+
+#sample-input {
+  border-bottom: 1px solid #dadce0;
+}
+
+
+
+.input-field .prefix.active, label.active {
+  color: #ff5252 !important;
+}
+
+.input-field label.active {
+  display: none;
+}
+
+.text-input {
+  width: 100%;
+}
+
+input[type="text"]:not(.browser-default) {
+  margin: 0;
+  height: 25px;
+}
+
+#search {
+  margin-top: 2px;
+}
+
+#search-input {
+  margin-left: 2rem;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.night .material-icons .btn-floating, .App .btn-floating, .btn-floating i, .btn-large, .btn-floating {
+  background-color: #9e9e9e33 !important;
+  color: #222 !important;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer a {
+  color: inherit;
+}
+
+.menu-button {
+  display: none;
+}
+
+nav .nav-wrapper i, nav i .material-icons {
+  line-height: inherit;
+}
+
+.flex-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0 2.5rem;
+  }
+
+@media only screen and (max-width: 1260px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .switch, .list-layout, .drop-menu, #sample {
+    display: none;
+  }
+  .menu-button {
+    display: inline-block;
+  }
+}
