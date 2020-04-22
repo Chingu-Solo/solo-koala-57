@@ -2,6 +2,8 @@
 
 The project is a clone of the Google Fonts web application, repoducing most of the functionality. It was completed as a Tier 2 Solo Project for [Chingu](https://www.chingu.io/), a platform designed to help boost your tech career with team projects. As a Tier 2 Project, this is a fully developed front-end application.
 
+The finished project can be found [here](https://googlefonts.travisvirgil.com/).
+
 ![Alt Text](./public/tier2.gif)
 
 ## Prerequisite
