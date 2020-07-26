@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.preloader-wrapper {
+  position: fixed;
+  margin: 0 45%;
+}
+
 nav {
   box-shadow: none;
   border-bottom: 1px solid #9e9e9e;
@@ -211,8 +216,6 @@ input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
   border-bottom: 1px solid #dadce0;
 }
 
-
-
 .input-field .prefix.active, label.active {
   color: #ff5252 !important;
 }
@@ -278,17 +281,24 @@ nav .nav-wrapper i, nav i .material-icons {
     margin: 0 2.5rem;
   }
 
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 1024px) {
   .grid-container {
     display: grid;
     grid-template-columns: auto auto;
   }
+  
+  .preloader-wrapper {
+    margin: 0 43%;
+  }
 }
 
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 650px) {
   .grid-container {
     display: grid;
     grid-template-columns: auto;
+  }
+  .preloader-wrapper{
+    margin: 0 35%;
   }
   .switch, .list-layout, .drop-menu, #sample {
     display: none;
