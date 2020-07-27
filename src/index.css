@@ -257,6 +257,13 @@ input[type="text"]:not(.browser-default) {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+.night .footer {
+  background-color: #222;
+}
+
+.App .footer {
   background-color: white;
 }
 
