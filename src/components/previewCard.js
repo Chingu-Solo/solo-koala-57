@@ -17,7 +17,7 @@ class PreviewCard extends Component {
         const cardList = filterData.length ? (
             filterData.map((dataset) => {
                 return (
-                    <LazyLoad className={!this.props.grid ? "grid-item" : null} height={100} key={filterData.indexOf(dataset)}>
+                    <LazyLoad className={!this.props.grid ? "grid-item" : null} height={0} key={filterData.indexOf(dataset)}>
                         <div className="card">
                             <div className="card-content">
                                 <div className="row">
@@ -35,7 +35,7 @@ class PreviewCard extends Component {
             })
         ) : (
             // <div className="center">Loading fonts...</div>
-            <div className="preloader-wrapper active">
+            <div className="preloader-wrapper active" id="preloader-wrapper">
                 <div className="spinner-layer spinner-red-only">
                 <div className="circle-clipper left">
                     <div className="circle"></div>
