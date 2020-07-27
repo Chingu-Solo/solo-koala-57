@@ -41,7 +41,8 @@ const rootReducer = (state = initState, action) => {
                 data: state.data,
                 search: '',
                 mode: false,
-                grid: false
+                grid: false,
+                gridIcon: 'reorder'
             }
         default:
             return state;
